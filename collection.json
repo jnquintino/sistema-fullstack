@@ -1,0 +1,644 @@
+{
+	"info": {
+		"_postman_id": "e082d4f6-83b3-4604-871d-47c3e20bbb81",
+		"name": "Sistema Fullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3915074"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Joao Quintino\",\n    \"email\": \"jnquintino@gmail.com\",\n    \"password\": \"12345678\",\n    \"profile\": \"Administrator\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/661f2185e200933813266251",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"661f2185e200933813266251"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzNTI3MTIsImV4cCI6MTcxMzM1NjMxMn0.IMWcR3V3HbbscpfylHMo8hz1h8zK3AYrZPOx7okMKko",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Joao Quintino\",\n    \"email\": \"jnquintino@gmail.com\",\n    \"password\": \"12345678\",\n    \"profile\": \"Administrator\",\n    \"enabled\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/661f2185e200933813266251",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"661f2185e200933813266251"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMTY3MDcsImV4cCI6MTcxMzMyMDMwN30.l3UF3gAdMXHX03GM3b-9UcOm49QbCR5H2g1-AYmsi-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/661f2185e200933813266251",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"661f2185e200933813266251"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jnquintino@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMjAzNDMsImV4cCI6MTcxMzMyMzk0M30.uvuOpwo1tjf8WhmnD2L-QV98zKOaUGcGv2hTXRRMwAA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"661f2185e200933813266251\",\n    \"title\": \"Post example\",\n    \"image\": \"https://www.pngall.com/wp-content/uploads/8/Sample-PNG-Image.png\",\n    \"description\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMTY3MDcsImV4cCI6MTcxMzMyMDMwN30.l3UF3gAdMXHX03GM3b-9UcOm49QbCR5H2g1-AYmsi-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMjAzNDMsImV4cCI6MTcxMzMyMzk0M30.uvuOpwo1tjf8WhmnD2L-QV98zKOaUGcGv2hTXRRMwAA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/661f33bb6699d860dbdbd80c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"661f33bb6699d860dbdbd80c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzNTI3MTIsImV4cCI6MTcxMzM1NjMxMn0.IMWcR3V3HbbscpfylHMo8hz1h8zK3AYrZPOx7okMKko",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/like/661f33bb6699d860dbdbd80c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"like",
+								"661f33bb6699d860dbdbd80c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Diskike by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzNTI3MTIsImV4cCI6MTcxMzM1NjMxMn0.IMWcR3V3HbbscpfylHMo8hz1h8zK3AYrZPOx7okMKko",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/dislike/661f33bb6699d860dbdbd80c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"dislike",
+								"661f33bb6699d860dbdbd80c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMjAzNDMsImV4cCI6MTcxMzMyMzk0M30.uvuOpwo1tjf8WhmnD2L-QV98zKOaUGcGv2hTXRRMwAA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"661f2185e200933813266251\",\n    \"title\": \"Post example\",\n    \"description\": \"\",\n    \"image\": \"https://www.pngall.com/wp-content/uploads/8/Sample-PNG-Image.png\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/posts/661f33bb6699d860dbdbd80c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"661f33bb6699d860dbdbd80c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMTY3MDcsImV4cCI6MTcxMzMyMDMwN30.l3UF3gAdMXHX03GM3b-9UcOm49QbCR5H2g1-AYmsi-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/661f1a75649ec9532ba73c40",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"661f1a75649ec9532ba73c40"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzNTgzMzUsImV4cCI6MTcxMzM2MTkzNX0.eJjVu1qO_mVHCFrxJ2L0dPMMW5N1gSqdiq53dpwdtNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user\": \"661f33bb6699d860dbdbd80c\",\n    \"post\": \"661f2185e200933813266251\",\n    \"description\": \"post comment\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMTY3MDcsImV4cCI6MTcxMzMyMDMwN30.l3UF3gAdMXHX03GM3b-9UcOm49QbCR5H2g1-AYmsi-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMTY3MDcsImV4cCI6MTcxMzMyMDMwN30.l3UF3gAdMXHX03GM3b-9UcOm49QbCR5H2g1-AYmsi-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/661f1b3fd622d41f16f8d5c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"661f1b3fd622d41f16f8d5c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMTY3MDcsImV4cCI6MTcxMzMyMDMwN30.l3UF3gAdMXHX03GM3b-9UcOm49QbCR5H2g1-AYmsi-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments/661f1b3fd622d41f16f8d5c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"661f1b3fd622d41f16f8d5c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMTY3MDcsImV4cCI6MTcxMzMyMDMwN30.l3UF3gAdMXHX03GM3b-9UcOm49QbCR5H2g1-AYmsi-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/661f1b3fd622d41f16f8d5c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"661f1b3fd622d41f16f8d5c5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/reports/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reports",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Posts - Small",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/reports/small",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"reports",
+								"small"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
