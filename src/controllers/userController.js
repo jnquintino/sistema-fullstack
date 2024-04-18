@@ -86,3 +86,11 @@ exports.login = async (req, res) => {
 		res.status(500).json({ error: error.message });
 	}
 };
+
+exports.identity = async (req, res) => {
+	if (req.user) {
+		return res.status(200).json({ userId: req.user.userId });
+	} else {
+		return res.status(401).json({ error: 'Credenciais invalidas' });
+	}
+};

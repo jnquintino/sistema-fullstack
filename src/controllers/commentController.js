@@ -24,6 +24,23 @@ exports.getCommentById = async (req, res) => {
 	}
 };
 
+exports.getCommentByPostId = async (req, res) => {
+	try {
+		const comment = await Comment.find({post: req.params.id });
+		if (!comment) {
+			return res.status(404).json({ error: 'Comment not found' });
+		}
+		const result = [];
+		for (const item of comment) {
+			item.post = await Post.findById(item.post);
+			result.push(item);
+		}
+		res.status(200).json(result);
+	} catch (error) {
+		res.status(500).json({ error: error.message });
+	}
+};
+
 exports.createComment = async (req, res) => {
 	try {
 		const { user, post, description } = req.body;
