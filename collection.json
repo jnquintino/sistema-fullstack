@@ -179,6 +179,37 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Identity",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTM0MDM0NjksImV4cCI6MTcxMzQwNzA2OX0.2PPrdKdEMMIfdc5wi-6XhTBNEX9ctKuPmGuFMbSzmek",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/decode",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"decode"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -496,6 +527,37 @@
 				},
 				{
 					"name": "Get by Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NjFmMjE4NWUyMDA5MzM4MTMyNjYyNTEiLCJpYXQiOjE3MTMzMTY3MDcsImV4cCI6MTcxMzMyMDMwN30.l3UF3gAdMXHX03GM3b-9UcOm49QbCR5H2g1-AYmsi-c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/661f1b3fd622d41f16f8d5c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"661f1b3fd622d41f16f8d5c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get by Id Copy",
 					"request": {
 						"auth": {
 							"type": "bearer",
